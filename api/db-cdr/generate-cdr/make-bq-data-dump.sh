@@ -40,10 +40,13 @@ fi
 
 echo "Dumping tables to csv from $BUCKET\n"
 
+##echo "Echoing dataset name"
+##echo ${DATASET}
+
 # Get tables in project, stripping out tableId.
 # Note tables larger than 1 G need to be dumped into more than one file.
 # concept_relationship and concept are only big ones now.
-if [ ${DATASET} ?? 'PUBLIC' || ${DATASET} ?? 'public' ]
+if [[ $DATASET == *public* ]] || [[ $DATASET == *PUBLIC* ]];
 then
     tables=(achilles_analysis achilles_results achilles_results_concept concept concept_relationship criteria db_domain domain vocabulary)
 else

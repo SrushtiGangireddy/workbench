@@ -97,6 +97,7 @@ else
     exit 1
 fi
 
+
 ## Dump workbench cdr counts
 echo "Dumping BigQuery cdr dataset to .csv"
 if ./generate-cdr/make-bq-data-dump.sh --dataset $WORKBENCH_DATASET --project $WORKBENCH_PROJECT --bucket $BUCKET

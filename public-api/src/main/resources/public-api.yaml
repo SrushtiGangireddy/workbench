@@ -520,7 +520,7 @@ definitions:
           description: concept id
           type: integer
           format: int64
-        numParticipants:
+        countValue:
           description: number of respondents
           type: integer
           format: int64
